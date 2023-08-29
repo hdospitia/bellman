@@ -14,7 +14,7 @@ curl -fsSL https://get.docker.com -o /tmp/get-docker.sh
 sudo sh /tmp/get-docker.sh
 
 # Install Homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # Add Brew to the PATH
 test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)

@@ -34,7 +34,7 @@ brew install \
     minikube \
     terragrunt \
     hashicorp/tap/terraform \
-    hashicorp/tap/hashicorp-vagrant \
+    hashicorp/tap/vagrant \
     hashicorp/tap/packer \
     aws/tap/aws-sam-cli \
     awscli \

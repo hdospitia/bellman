@@ -47,9 +47,9 @@ brew install \
     go
 
 # Clone configurations repo
-git clone https://github.com/hdospitia/configs.git
+git clone https://github.com/hdospitia/configs.git ~/configs
 
 # Put configurations
-cp ./configs/tmux.conf ~/.tmux.conf
-cp ./configs/vimrc ~/.vimrc
-cp ./config/dani.omp.json ~/.dani.omp.json
+cp ~/configs/tmux.conf ~/.tmux.conf
+cp ~/configs/vimrc ~/.vimrc
+cp ~/configs/dani.omp.json ~/.dani.omp.json

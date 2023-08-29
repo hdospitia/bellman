@@ -7,7 +7,7 @@ set -o errexit
 
 # Update APT sources and install Git package
 sudo apt-get update
-sudo apt install -y git-all curl
+sudo apt install -y git-all curl build-essential
 
 # Install Docker engine from convenience script
 curl -fsSL https://get.docker.com -o /tmp/get-docker.sh
@@ -29,6 +29,7 @@ brew tap weaveworks/tap
 
 # Install utilities from Homebrew
 brew install \
+    gcc \
     kubectl \
     kind \
     minikube \

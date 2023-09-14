@@ -46,6 +46,9 @@ brew install \
     vim \
     go
 
+# Install Vim Vundle Plugin Manager
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 # Clone configurations repo
 git clone https://github.com/hdospitia/configs.git ~/configs
 

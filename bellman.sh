@@ -56,3 +56,8 @@ git clone https://github.com/hdospitia/configs.git ~/configs
 cp ~/configs/tmux.conf ~/.tmux.conf
 cp ~/configs/vimrc ~/.vimrc
 cp ~/configs/dani.omp.json ~/.dani.omp.json
+
+# Install NodeJS tools
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+. ~/.nvm/nvm.sh
+nvm install --lts

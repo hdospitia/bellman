@@ -4,6 +4,7 @@
 set -o pipefail
 set -o nounset
 set -o errexit
+set -x
 
 # Update APT sources and install Git package
 sudo apt-get update

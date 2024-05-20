@@ -17,7 +17,7 @@ NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Ho
 test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
 test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 test -r ~/.bash_profile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.bash_profile
-echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
+echo "eval \$($(brew --prefix)/bin/brew shellenv)" >> ~/.profile
 
 # Add Homebrew Taps
 brew tap hashicorp/tap
@@ -65,4 +65,3 @@ sudo usermod -aG docker $USER
 
 # Enable Oh My Posh
 echo 'eval "$(oh-my-posh init bash -c "https://raw.githubusercontent.com/hdospitia/configs/main/dani.omp.json")"' >> ~/.profile
-. ~/.profile

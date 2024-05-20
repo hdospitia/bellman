@@ -9,10 +9,6 @@ set -o errexit
 sudo apt-get update
 sudo apt install -y git-all curl build-essential
 
-# Install Docker engine from convenience script
-curl -fsSL https://get.docker.com -o /tmp/get-docker.sh
-sudo sh /tmp/get-docker.sh
-
 # Install Homebrew
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
@@ -37,14 +33,14 @@ brew install \
     hashicorp/tap/terraform \
     hashicorp/tap/vagrant \
     hashicorp/tap/packer \
-    aws/tap/aws-sam-cli \
     awscli \
     pre-commit \
     gh \
     jandedobbeleer/oh-my-posh/oh-my-posh \
     tmux \
     vim \
-    go
+    go \
+    nvm
 
 # Install Vim Vundle Plugin Manager
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -55,9 +51,17 @@ git clone https://github.com/hdospitia/configs.git ~/configs
 # Put configurations
 cp ~/configs/tmux.conf ~/.tmux.conf
 cp ~/configs/vimrc ~/.vimrc
-cp ~/configs/dani.omp.json ~/.dani.omp.json
+
+# Install Docker engine from convenience script
+curl -fsSL https://get.docker.com -o /tmp/get-docker.sh
+sudo sh /tmp/get-docker.sh
+sudo usermod -aG docker $USER
 
 # Install NodeJS tools
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
-. ~/.nvm/nvm.sh
-nvm install --lts
+# curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+# . ~/.nvm/nvm.sh
+# nvm install --lts
+
+# Enable Oh My Posh
+echo 'eval "$(oh-my-posh init bash -c "https://raw.githubusercontent.com/hdospitia/configs/main/dani.omp.json")"' >> ~/.profile
+. ~/.profile

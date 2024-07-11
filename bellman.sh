@@ -44,14 +44,14 @@ brew install \
     nvm
 
 # Install Vim Vundle Plugin Manager
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+#git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # Clone configurations repo
 git clone https://github.com/hdospitia/configs.git ~/configs
 
 # Put configurations
-cp ~/configs/tmux.conf ~/.tmux.conf
-cp ~/configs/vimrc ~/.vimrc
+#cp ~/configs/tmux.conf ~/.tmux.conf
+#cp ~/configs/vimrc ~/.vimrc
 
 # Install Docker engine from convenience script
 curl -fsSL https://get.docker.com -o /tmp/get-docker.sh

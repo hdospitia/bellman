@@ -41,7 +41,8 @@ brew install \
     tmux \
     vim \
     go \
-    nvm
+    node \
+    httpie
 
 # Install Vim Vundle Plugin Manager
 #git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -59,8 +60,8 @@ sudo sh /tmp/get-docker.sh
 sudo usermod -aG docker $USER
 
 # Install NodeJS tools
-# curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
-# . ~/.nvm/nvm.sh
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+. ~/.nvm/nvm.sh
 # nvm install --lts
 
 # Enable Oh My Posh
